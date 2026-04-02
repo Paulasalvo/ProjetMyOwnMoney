@@ -31,7 +31,7 @@ Integrentes:
 """
 
 # VARIABLES DE CONTROL Y MENÚ 
-opcion_menu = 0  # Opción seleccionada en el menú principal 
+opcion_menu = 0  # Opción seleccionada en el menú principal(CAMBIO DE EJEMPLO)
 tipo_consulta = 0  # Tipo de consulta seleccionada
 categoria = 0  # Categoría elegida para visualizar totales 
 alcance = 0  # Define si el cálculo es individual o global 
