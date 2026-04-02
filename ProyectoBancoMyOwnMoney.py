@@ -45,27 +45,27 @@ saldo = 500000  # Saldo disponible en la cuenta del cliente
 
 # VARIABLES DE TRANSFERENCIA (TEF) 
 id_tef = 93494  # Identificador único de la transferencia 
-fecha = "13-02-25"  # Fecha en que se realiza la transacción 
-hora = "12:00:00"  # Hora en que se realiza la transacción 
-monto = 100000  # Monto de la operación (TEF o pago) 
+fecha_tef = "13-02-25"  # Fecha en que se realiza la transacción 
+hora_tef = "12:00:00"  # Hora en que se realiza la transacción 
+monto_tef = 100000  # Monto de la operación (TEF o pago) 
 banco_destino = "Banco YouOwnMoney"  # Banco al que se transfiere el dinero 
 rut_destinatario = "12345678-9"  # RUT de la persona que recibe el dinero 
 cuenta_destino = "927463"  # Cuenta bancaria destino de la transferencia 
 comentario = "Trasferencia Agua"  # Descripción de la transacción 
 
 # VARIABLES DE PAGO
-id_pago = 384735  # Identificador único del pago 
+id_pago = 3835  # Identificador único del pago 
 rut_comercio = "77984242-3"  # RUT del comercio donde se realiza el pago 
-fecha = "13-04-25" #Fecha Pago
-hora = "12:00:00" #Hora Pago
-monto = 150000 #Monto del Pago
+fecha_pago = "13-04-25" #Fecha Pago
+hora_pago = "12:00:00" #Hora Pago
+monto_pago = 150000 #Monto del Pago
 
 
 # VARIABLES DE RECLAMO
-id_reclamo = 0  # Identificador único del reclamo 
+id_reclamo = 44  # Identificador único del reclamo 
 descripcion = "Me di cuenta hoy, al ver menos dinero en mi cuenta corriente"  # Detalle del reclamo del cliente 
 monto_reclamado = 500000  # Monto total reclamado por fraude 
-estado = "En proceso"  # Estado del reclamo (en proceso, validado, cerrado) 
+estado = "Investigación"  # Estado del reclamo (en proceso, validado, cerrado) 
 numero_cuenta = "89827183"  # Relaciona el reclamo con el cliente 
 
 # VARIABLES DE TOTALES (MÉTRICAS GLOBALES) 
@@ -132,18 +132,18 @@ while True:
         
         if tipo_consulta == 1:
             print("\n>> DETALLE DE TRANSACCIONES TEF (Individual)")
-            print(f"ID: {id_tef} | DESTINO: {banco_destino} | MONTO: $250000")
-            print("FECHA: 24/03/2015 | RUT DEST: 18.458.743-2")
+            print(f"ID: {id_tef} | DESTINO: {banco_destino} | MONTO: ${monto_tef}")
+            print(f"FECHA: {fecha_tef} | RUT DEST: {rut_destinatario}")
         
         elif tipo_consulta == 2:
             print("\n>> DETALLE DE PAGOS")
-            print("ID: 440 | COMERCIO: 76.123.456-K | MONTO: $80000")
-            print("FECHA: 24/03/2015 | HORA: 12:00:00")
+            print(f"ID: {id_pago} | COMERCIO: {rut_comercio} | MONTO: {monto_pago}")
+            print(f"FECHA: {fecha_pago} | HORA: {hora_pago}")
 
         elif tipo_consulta == 3:
             print("\n>> INFORME DETALLADO DE RECLAMOS")
-            print("ID RECLAMO: 001 | ESTADO: En investigacion")
-            print("DESCRIPCION: Me di cuenta ayer cuando vi que tenia menos dinero")
+            print(f"ID RECLAMO: {id_reclamo} | ESTADO: {estado} | MONTO: ${monto_reclamado}")
+            print(f"DESCRIPCION: {descripcion}")
 
     elif opcion_menu == 4:
         print("Cerrando sesión... Gracias por usar el sistema del Banco MyOwnMoney.")
